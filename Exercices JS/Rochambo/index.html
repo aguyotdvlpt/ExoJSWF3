@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>roshambo</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // tableau des éléments du jeu
+    const roshambo = ['pierre', 'feuille', 'ciseaux'];
+      // - Récupérer le choix de l'utilisateur via une **variable d'url** ?
+    const urlVars = new URLSearchParams(location.search);
+
+    const choiceUser =urlVars.get('choiceUser');
+    
+      if (choiceUser) { //est-ce qu'il y a une variable d'url
+      if(roshambo.includes(choiceUser)) {
+        console.log('choiceUser => ', choiceUser);
+        //http://localhost:8080/Exercices%20JS/Rochambo/index.html?choiceUser=pierre
+
+
+        /*  - Générer un nombre aléatoire COMPRIS dans l'intervalle */
+
+        let choixPc = function getRandomIntInclusive(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min +1)) + min;
+          }
+//~~(Math.random() * roshambo.length); permet de simplifier la fonction et de ne pas être bloqué par une taille fixe de tableau
+
+          // console.log(choixPc(0,2));
+          choixPcTxt = roshambo[choixPc(0,2)];
+
+          switch (choixPcTxt) {
+            case 'feuille':
+                switch (choiceUser) {
+                  case 'pierre' :
+                    resultat = "Vous avez perdu !";
+                  break;
+
+                  case 'ciseaux' :
+                    resultat = "Vous avez gagné !";
+                  break;
+
+                  case 'feuille' :
+                    resultat = "Match Nul !";
+                  break;
+                }
+              break;
+
+            case 'pierre':
+                switch (choiceUser) {
+                  case 'ciseaux' :
+                    resultat = "Vous avez perdu !";
+                  break;
+
+                  case 'feuille' :
+                    resultat = "Vous avez gagné !";
+                  break;
+
+                  case 'pierre' :
+                    resultat = "Match Nul !";
+                  break;
+                }
+              break;
+
+              case 'ciseaux':
+                switch (choiceUser) {
+                  case 'feuille' :
+                    resultat = "Vous avez perdu !";
+                  break;
+
+                  case 'pierre' :
+                    resultat = "Vous avez gagné !";
+                  break;
+
+                  case 'ciseaux' :
+                    resultat = "Match Nul !";
+                  break;
+                }
+              break;
+          }
+
+
+          console.log(`Vous avez choisi ${choiceUser} et l'ordinateur a choisi ${choixPcTxt}`);
+
+          console.log(`${resultat}`)
+        
+      } else {
+        document.write(`choisissez dans ${roshambo.join()}`);
+      }
+
+    }
+
+    </script>
+  </body>
+</html>

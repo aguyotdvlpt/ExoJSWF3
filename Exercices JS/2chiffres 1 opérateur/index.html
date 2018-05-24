@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>2 Chiffres 1 opérateur</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+      
+      //Sauvegarder une triple saisie utilisateur (dans l'ordre que l'on veut)
+      // un premier nombre ou Chiffres
+      // un opérateur arithmétique
+      // un second nombre ou Chiffres
+
+  // Attention à transtyper les nombres
+  // l'opérateur arithmétique est interprété comme une chaîne de caratère
+  // donc il faudra une logique pour appliquer réellement la bonne opération en fonction de l'opérateur
+  // PAS LE DROIT d'utiliser la fonction eval (`${num1} ${arithmOperator} $(num2}`);
+
+  // Faire les vérifications nécessaires comme interdire une division par zéro (qui génère une erreur fatale pour la plupart des langages)
+
+
+  let chiffre1 = Number(prompt("Veuillez saisir le premier chiffre"));
+  let op = prompt("Veuillez saisir l'opérateur");
+  let chiffre2 = Number(prompt("Veuillez saisir le deuxième chiffre"));
+  let resultat = chiffre1 + chiffre2;
+
+if (op === "+") {
+	resultat = chiffre1 + chiffre2;
+}
+
+if (op === "-") {
+	resultat = chiffre1 - chiffre2;
+}
+
+
+
+
+
+
+
+
+  // console.log("Le résultat de " + chiffre1 + "+" + chiffre2 + " " + "résultat")
+  console.log(`Le résultat de ${chiffre1} ${op} ${chiffre2} = ${resultat} `)
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

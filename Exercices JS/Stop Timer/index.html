@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>stop interval</title>
+    <script type="text/javascript">
+
+      // Créer un timer qui, sur une périodicité d'une seconde, affiche une variable i s'incrémentant de 1 en 1. Le timer doit s'arrêter lorsque i a atteint 5.
+    
+      let i=0;
+
+
+
+      var x = setInterval(function () {
+          
+          if (i===5) {
+        clearInterval(x);
+      }
+
+        document.body.innerHTML = i++; 
+      }, 1000);
+
+     
+      
+      
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>longest words</title>
+    <script type="text/javascript">
+    var words = ['foo', 'longest', 'bar', 'test', 'estlong'];
+  
+    
+    /* Pour trier le tableau, j'appelle la fonction sort 
+  Cette fonction trie en fonction du nombre et retourne dans le cas des comparaisons de a et b soit 1, 0 ou -1.
+
+  Dans le cas ou a < b et return = 1 alors b sera placé avant a.
+
+  C'est pourquoi en demandant de retourner la comparaison de b.length avec a.length, le résultat étant true (qui vaut 1) ou false (qui vaut 0), nous avons un raccourci qui permet de retourner la valeur 1 quand le mot b est plus long que le mot a et le place donc avant dans le tableau.
+
+  Ceci correspond à inclure dans la fonction :
+
+      if (b.length > a.length) {
+        return 1
+      }
+
+      Ce qui nous donne :
+  
+    words.sort(function(a, b) {
+
+        return b.length > a.length;
+      
+    });
+
+Que l'on peut encore raccourcir par :
+  */
+
+words.sort((a, b) => b.length > a.length);  //< ----------fonction raccrourcie pour trier un tableau par longueur de caractères ------->
+
+// console.log(words);
+
+
+ // Boucle 
+  	var longestWords=[];
+    var motPlusLong =""; 
+      
+        	for( i=0; i < words.length; i++) {
+    		
+        // SI longeur mot courant === longeur premier mot du tableau trié
+        // alors je pousse dans tableau
+        //sinon je stoppe la boucle
+
+        if (words[i].length === words[0].length) {
+          longestWords.push(words[i]);
+          console.log(longestWords);
+        }
+
+        else {
+
+          break;
+        }
+    	   		
+        }
+    	 
+    	console.log(longestWords);
+    
+
+
+
+
+      // console.log(longestWords); // ["longest", "estlong"]
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

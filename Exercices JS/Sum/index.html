@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>calculate numbers</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+/*
+      function sum(po,bu) {
+      
+        return po + bu;
+      }
+      //let arg = arguments.length(sum);
+      console.log(sum(2,5,6,3));*/
+
+
+/*
+    function sum()
+     {
+      
+      let nbArg = Object.values(arguments);
+      //console.log(nbArg);
+      let nbTour = nbArg.length;
+      //console.log(nbTour);
+   
+        for (i=0; i<=nbTour; i++) {
+        var fin = nbArg[i];
+      }
+        return fin;
+      
+    }
+*/
+    function sum(...nums) {
+      ('nums => ', nums);
+
+      let total = 0;
+      for(const num of nums) {
+        total += num;
+      }
+
+      return total;
+    }
+
+
+    console.log(sum(1,2,3,4,5,50)); // int(45)
+
+    </script>
+  </body>
+</html>

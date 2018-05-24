@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>longest words</title>
+    <script type="text/javascript">
+    const words = ['a', 'bb', 'b', 'test', 'estlong', '12345678, bar'];
+      
+    // j'ai forcément besoin d'une première boucle pour parcourir tous les éléments
+    // est-ce que j'ai besoin de connaître les clés ou index ? => NONE
+  
+    // Quel type de boucle puis-je alors utiliser ?
+
+      //LOOP :
+        //=> Affiche les éléments un par un
+        
+
+      // for(let i=0; i<words.length; i++) {
+      //   console.log(words[i]);
+      // }
+
+      let maxLength = 0;
+      //une première boucle pour récupérer la LONGUEUR du ou des mots les plus longe
+
+      for(const word of words) {
+        // La longueur du mot courant est supérieure ou égale à quoi ?
+        if (word.length >= maxLength) { //ITERATION 1 de la boucle 1>0 ITERATION 2 loop 'bb'.length > 'a'.length
+          maxLength = word.length;
+          console.log(word);
+        }
+      }
+       console.log('maxLength => ', maxLength);
+
+       const longestWords= [];
+       for(const word of words) {
+        if (maxLength === word.length) {
+          longestWords.push(word);
+        }
+       }
+
+      // console.log(longestWords); // ["longest", "estlong"]
+
+      //---------------------------------------------------------------------
+
+  const descendingSort = words.sort((a, b) => b.length- a.length);
+  const longestWords2 = [];
+  descendingSort.every(word => {
+    if (descendingSort [0].length === word.length) {
+      console.log(word);
+      longestWords2.push(word);
+      return true
+  }
+
+
+
+  // -------------------------SOLUTION ABSOLUE -----------------------------
+
+  const longestWords3 = words.filter(v => v.length === Math.max(...words.map(v => v.length)));
+  console.log(longestWords3);
+
+}
+
+    
+
+    </script>
+  
+  </head>
+  <body>
+  </body>
+</html>

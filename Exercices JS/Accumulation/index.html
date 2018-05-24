@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    let i= 26;
+    let j = 0;
+    let a = [];
+    let k = 65
+    let alfa = '';
+    
+    while(i-= 1) {  // Equivalent à = i-1
+      (j +=2);
+      alfa += String.fromCharCode(k++);
+      a.push(j);
+      if(i%2) {
+        console.log(' ODD number => '+i);
+      } else {
+        console.log(' EVEN number =>'+i);
+      }
+      }
+
+    
+    
+    console.log(i);
+    console.log(j);
+    console.log('alfa =>', alfa);
+    console.log('a =>', a); 
+
+
+    
+    document.write('i => '+i); // 0
+    document.write('j => '+j); // 50
+    document.write('a => '+alfa); // 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    document.write('<br>'+a); // 26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,0
+    </script>
+  </body>
+</html>

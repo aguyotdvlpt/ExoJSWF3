@@ -1,0 +1,51 @@
+body{
+    margin: 0 auto;
+    width: 90%;
+}
+
+.rectangle {
+	display: inline-block;
+	background-color: royalblue;
+	width: 400px;
+	height: 300px;
+	border-radius: 15px;
+	opacity: 1;
+   	transition: background-color .25s ease-in-out;
+}
+
+.good {
+	background-color: limegreen;
+	width: 400px;
+	height: 300px;
+	border-radius: 15px;
+	opacity: 1;
+   	transition: background-color .25s ease-in-out;
+}
+
+.important {
+	background-color: firebrick;
+	width: 400px;
+	height: 300px;
+	border-radius: 15px;
+	opacity: 1;
+   	transition: background-color .25s ease-in-out;
+}
+
+.hide {
+	display:none;
+}
+
+
+
+
+
+
+
+/* Attention à l'ordre de vos déclarations de style */
+
+/* Instructions CSS
+Le rectangle est PAR DÉFAUT bleu (royalblue), de taille 400x300 pixels et possède des coins arrondis.
+Créer une class good qui donnera un fond de rectangle de couleur vert (limegreen).
+Créer une class important qui donnera un fond de rectangle de couleur rouge (firebrick).
+Le changement de couleur du rectangle doit être "progressif" (fade-in, fade-out).
+💡 Faites attention à l'ORDRE de vos déclarations de styl */

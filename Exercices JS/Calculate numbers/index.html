@@ -1,0 +1,64 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>calculate numbers</title>
+</head>
+<body>
+    <script>
+
+    	let nb1 = Number(prompt('Veuillez saisir le premier nombre'));
+    	let nb2 = Number(prompt('Veuillez saisir le second nombre'));
+    	var op = prompt('Veuillez saisir l\'opérateur');
+
+    	
+
+    	// while (op !== "+" && op !== "-" && op !== "*" && op !== "/") {  //Tant que op est différent d'un opérateur arithmétique
+
+
+    	// Autre solution pour la boucle : passer par un tableau et la fonction (includes)
+
+    	let array=["+","-","*","/"];		// création d'un tableau avec les opérateurs
+       	//oparray = array.includes(op);		// Vérification de la variable op dans le tableau [oparray] => renvoie true / false
+
+    	//while (oparray === false) {			// Tant que la variable op n'est pas dans le tableau
+    	while (!array.includes(op)) {			// Tant que la variable op n'est pas dans le tableau
+    	
+    			var op = prompt('Veuillez saisir un opérateur valide'); // Demander à saisir un opérateur valide et remplacer la variable op
+    			//oparray = array.includes(op);					// Revérifier si la variable est dans le tableau => renvoie un nouveau true / false.
+    	}
+
+    		if (op === "/" && nb2 === 0) {								// Si l'opérateur = / et nb2 = 0 => Division par 0 impossible
+    			console.log ('Il est impossible de diviser par 0')
+
+    		} else {
+
+
+		    	switch (op) {
+		    		case "+" :
+		    			resultat = nb1 + nb2;
+		    		break;
+
+		    		case "-":
+		    			resultat = nb1 - nb2;
+		    		break;
+
+		    		case "*":
+		    			resultat = nb1 * nb2;
+		    		break;
+
+		    		case "/":
+		    			resultat = nb1 / nb2;
+		    		break;
+
+		    		default :
+		    			// let op = prompt('Veuillez saisir un opérateur valide');
+		    			console.log('Veuillez blablabla');
+	    			}
+	    	console.log(`Le résultat de l'operation ${nb1} ${op} ${nb2} = ${resultat};`);
+	    	}
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>table multiplication</title>
+  </head>
+  <body>
+    <h3>table de multiplication</h3>
+
+
+   <table>
+    <script type="text/javascript">
+
+      const L = 11;
+
+     // first LOOP to iterate i from 1 to 10 
+      for (let a=1; a<L; a++) {
+
+                document.write(`<tr>`);
+
+          // second LOOP to iterate j from 1 to 10
+          for (let b=1; b<L; b++) {
+
+                // => multiplication i by j           
+                document.write(`<td> ${a*b} </td>`)
+                }
+            document.write('</tr>');
+          }
+      
+
+    </script>
+</table>
+  </body>
+</html>
